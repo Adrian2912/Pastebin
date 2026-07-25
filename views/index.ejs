@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pastebin</title>
+        <link rel="stylesheet" href="/stylesheets/styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="textEnterArea">
+            <form action="/pastesRendering/content" method="POST">
+                <input type="text" name="content" placeholder="Enter your text here..." id="messageArea" required>
+                <input type="submit" value= "Creeate a new paste">
+            </form>
+        </div>
+        <div id="pastesLocation">
+            <div id="allPastes"><% for (let i = 0; i < pastesList.length; ++i) { %>
+                <a href=<%="/pastesRendering/" + pastesList[i].id%> target="_self"><%= pastesList[i].content %></a>
+                <% } %>
+            </div>
+        </div>
+    </body>
+</html>
