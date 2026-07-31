@@ -7,14 +7,14 @@
     </head>
     <body>
         <div id="textEnterArea">
-            <form action="/pastesRendering/content" method="POST">
+            <form action="/paste/content" method="POST">
                 <input type="text" name="content" placeholder="Enter your text here..." id="messageArea" required>
                 <input type="submit" value= "Creeate a new paste">
             </form>
         </div>
         <div id="pastesLocation">
             <div id="allPastes"><% for (let i = 0; i < pastesList.length; ++i) { %>
-                <a href=<%="/pastesRendering/" + pastesList[i].id%> target="_self"><%= pastesList[i].content %></a>
+                <a href=<%="/paste/" + pastesList[i].id%> target="_self"><%= pastesList[i].content %></a>
                 <% } %>
             </div>
         </div>
