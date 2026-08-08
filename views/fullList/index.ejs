@@ -13,8 +13,8 @@
             </form>
         </div>
         <div id="pastesLocation">
-            <div id="allPastes"><% for (let i = 0; i < pastesList.length; ++i) { %>
-                <a href=<%="/paste/" + pastesList[i].id%> target="_self"><%= pastesList[i].content %></a>
+            <div id="allPastes"><% for (let i = 0; i < data.length; ++i) { %>
+                <a href=<%="/paste/" + data[i].id%> target="_self"><%= data[i].content %></a>
                 <% } %>
             </div>
         </div>
